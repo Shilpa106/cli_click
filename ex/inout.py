@@ -1,45 +1,45 @@
-import click
+# import click
 
 
 # # 1*****************************************************
-# import click
-# @click.command()
-# def hello():
-#     click.echo('Hello world!')
+import click
+@click.command()
+def hello():
+    click.echo('Hello world!')
 
-# if __name__=='__main__':
-#     hello()
+if __name__=='__main__':
+    hello()
 
 
 # 2*******************************Nesting commands******************************
-# @click.group()
-# def cli():
-#     pass
+@click.group()
+def cli():
+    pass
 
-# @click.command()
-# def initdb():
-#     click.echo('Initialized the database')
+@click.command()
+def initdb():
+    click.echo('Initialized the database')
 
-# @click.command()
-# def dropdb():
-#     click.echo('Dropped the database')
+@click.command()
+def dropdb():
+    click.echo('Dropped the database')
 
-# cli.add_command(initdb)
-# cli.add_command(dropdb)
+cli.add_command(initdb)
+cli.add_command(dropdb)
 
-# if __name__ == '__main__':
-#     cli()
+if __name__ == '__main__':
+    cli()
 
 
 # *********************************Registering Commands Later**********
-# @click.command()
-# def greet():
-#     click.echo("hello , world!")
+@click.command()
+def greet():
+    click.echo("hello , world!")
 
-# @click.group()
-# def group():
-#     pass
-# group.add_command(greet)
+@click.group()
+def group():
+    pass
+group.add_command(greet)
 
 
 # *****************************Adding Parameters*************
